@@ -6,14 +6,14 @@
 /*   By: yahiaelboukili <yahiaelboukili@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 18:00:42 by yahiaelbouk       #+#    #+#             */
-/*   Updated: 2024/09/17 12:40:57 by yahiaelbouk      ###   ########.fr       */
+/*   Updated: 2024/10/21 15:57:22 by yahiaelbouk      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <unistd.h>
 
-int	ft_strlen(char *str)
+int	ft_strlen(const char *str)
 {
 	int	i;
 

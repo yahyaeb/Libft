@@ -6,7 +6,7 @@
 /*   By: yahiaelboukili <yahiaelboukili@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 16:29:48 by yahiaelbouk       #+#    #+#             */
-/*   Updated: 2024/10/20 19:35:32 by yahiaelbouk      ###   ########.fr       */
+/*   Updated: 2024/10/21 15:58:51 by yahiaelbouk      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,20 +16,21 @@ char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
     // Allocate memory for the new string
     char * str;
-    int i;
-    int size = ft_strlen((char *)s + 1);
-    str = (char *)malloc((size) * sizeof(char));
-    if(!str || !s || size == 0)
+    unsigned int i;
+
+    if(!s)
         return NULL;
-    // Loop through the string
+    
     i = 0;
-    while(i < size)
+    str = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
+    if(str == NULL)
+        return NULL;
+    
+    while(s[i] != '\0')
     {
-        // Call f(index, character)
-        str[i] = (*f)(i,s[i]);
+        str[i] = f(i,s[i]);
         i++;
     }
-    str[i] = '\0'; // Null-terminate the new string
-    // Return the new string
+    str[i] = '\0';
     return str;
 }

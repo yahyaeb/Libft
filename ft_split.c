@@ -6,7 +6,7 @@
 /*   By: yahiaelboukili <yahiaelboukili@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 19:47:14 by yahiaelbouk       #+#    #+#             */
-/*   Updated: 2024/10/17 19:47:42 by yahiaelbouk      ###   ########.fr       */
+/*   Updated: 2024/10/21 16:00:09 by yahiaelbouk      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ int ft_wordcount(char const *s, char c)
     int i = 0;
     int count = 0;
     int in_word = 0;
+    if(!s)
+        return 0;
     while(s[i])
     {
         if(s[i] != c && in_word == 0)

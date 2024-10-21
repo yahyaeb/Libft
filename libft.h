@@ -7,7 +7,7 @@ typedef struct s_list {
 } t_list;
 int	ft_atoi(char *str);
 void	ft_bzero(void *s, size_t n);
-int	ft_strlen(char *str);
+int	ft_strlen(const char *str);
 int	ft_isalnum(int c);
 int	ft_isalpha(int c);
 int	ft_isascii(int c);
@@ -41,3 +41,4 @@ void	ft_lstadd_back(t_list **alst, t_list *new);
 void ft_lstdelone(t_list *lst, void (*del)(void*));
 void ft_lstclear(t_list **lst, void (*del)(void*));
 void ft_lstiter(t_list *lst, void (*f)(void *));
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
