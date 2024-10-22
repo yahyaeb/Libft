@@ -5,91 +5,86 @@
 #                                                     +:+ +:+         +:+      #
 #    By: yahiaelboukili <yahiaelboukili@student.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2020/03/09 18:24:09 by daelee            #+#    #+#              #
-#    Updated: 2024/10/20 19:31:16 by yahiaelbouk      ###   ########.fr        #
+#    Created: 2024/10/22 18:37:34 by yahiaelbouk       #+#    #+#              #
+#    Updated: 2024/10/22 19:26:06 by yahiaelbouk      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
-
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror
-AR = ar rcs
-RM = rm -f
+CFLAGS = -Wall -Wextra -Werror -g
+OBJS_DIR = obj/
 
-FILES = ft_memset \
-		ft_bzero \
-		ft_memcpy \
-		ft_memmove \
-		ft_memchr \
-		ft_memcmp \
-		ft_strlen \
-		ft_strlcpy \
-		ft_strlcat \
-		ft_strchr \
-		ft_strrchr \
-		ft_strnstr \
-		ft_strncmp \
-		ft_atoi \
-		ft_isalpha \
-		ft_isdigit \
-		ft_isalnum \
-		ft_isascii \
-		ft_isprint \
-		ft_toupper \
-		ft_tolower \
-		ft_calloc \
-		ft_strdup \
-		ft_putchar_fd \
-		ft_putstr_fd \
-		ft_putendl_fd \
-		ft_putnbr_fd \
-		ft_strmapi \
-		ft_itoa \
-		ft_substr \
-		ft_strjoin \
-		ft_strtrim \
-		ft_strncpy \
-		ft_split \
-		ft_lstnew \
-		ft_lstadd_front \
-		ft_lstsize \
-		ft_lstlast \
-		ft_lstadd_back \
-		ft_lstdelone \
-		ft_lstclear	\
-		ft_lstiter \
-		ft_lstmap
 
-# Add bonus file names here if you have any
-FILES_B = ft_lstnew # Example of a bonus file
+SRCS = ft_isalpha.c \
+       ft_isdigit.c \
+       ft_isalnum.c \
+       ft_isascii.c \
+       ft_isprint.c \
+       ft_strlen.c \
+       ft_toupper.c \
+       ft_tolower.c \
+       ft_atoi.c \
+       ft_bzero.c \
+       ft_memset.c \
+       ft_strchr.c \
+       ft_strrchr.c \
+       ft_strncmp.c \
+       ft_memchr.c \
+       ft_memcmp.c \
+       ft_memcpy.c \
+       ft_strlcpy.c \
+       ft_strlcat.c \
+       ft_memmove.c \
+       ft_strnstr.c \
+       ft_calloc.c \
+       ft_strdup.c
 
-SRCS_DIR = ./
-SRCS = $(addprefix $(SRCS_DIR), $(addsuffix .c, $(FILES)))
-SRCS_B = $(addprefix $(SRCS_DIR), $(addsuffix .c, $(FILES_B)))
+SRCS_ADVANCED = ft_putchar_fd.c \
+                 ft_putstr_fd.c \
+                 ft_putendl_fd.c \
+                 ft_putnbr_fd.c \
+                 ft_itoa.c \
+                 ft_strmapi.c \
+                 ft_substr.c \
+                 ft_strjoin.c \
+                 ft_strtrim.c \
+                 ft_split.c
 
-OBJS_DIR = ./
-OBJS = $(addprefix $(OBJS_DIR), $(addsuffix .o, $(FILES)))
-OBJS_B = $(addprefix $(OBJS_DIR), $(addsuffix .o, $(FILES_B)))
+SRCS_BONUS = ft_lstnew.c \
+             ft_lstadd_front.c \
+             ft_lstsize.c \
+             ft_lstlast.c \
+             ft_lstadd_back.c \
+             ft_lstdelone.c \
+             ft_lstclear.c \
+             ft_lstiter.c \
+             ft_lstmap.c \
+             ft_strncpy.c
+
+
+OBJS = $(addprefix $(OBJS_DIR), $(SRCS:.c=.o)) \
+       $(addprefix $(OBJS_DIR), $(SRCS_ADVANCED:.c=.o)) \
+       $(addprefix $(OBJS_DIR), $(SRCS_BONUS:.c=.o))
+
+all: $(OBJS_DIR) $(NAME)
+
+$(OBJS_DIR):
+	mkdir -p $(OBJS_DIR)
 
 # Compile .c files to .o files
-$(OBJS_DIR)%.o: $(SRCS_DIR)%.c
+$(OBJS_DIR)%.o: %.c
 	$(CC) $(CFLAGS) -c -o $@ $<
 
 $(NAME): $(OBJS)
-	$(AR) $@ $^
-
-bonus: $(OBJS_B)
-	$(AR) $(NAME) $^
-
-all: $(NAME)
+	ar rcs $@ $^
 
 clean:
-	$(RM) $(OBJS) $(OBJS_B)
+	rm -f $(OBJS_DIR)*.o
 
 fclean: clean
-	$(RM) $(NAME)
+	rm -f $(NAME)
 
 re: fclean all
 
-.PHONY: bonus all clean fclean re
+.PHONY: all clean fclean re
