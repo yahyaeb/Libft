@@ -6,7 +6,7 @@
 /*   By: yahiaelboukili <yahiaelboukili@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/13 20:12:07 by yahiaelbouk       #+#    #+#             */
-/*   Updated: 2024/10/13 16:20:33 by yahiaelbouk      ###   ########.fr       */
+/*   Updated: 2024/10/24 20:42:44 by yahiaelbouk      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,16 +22,15 @@ size_t	ft_strlcat(char *restrict dst, const char *src, size_t dstsize)
 	size_t	dst_or_length;
 
 	i = 0;
-	if((!src || !dst) && dstsize == 0)
-		return 0;
+	if ((!src || !dst) && dstsize == 0)
+		return (0);
 	src_length = ft_strlen((char *)src);
 	dst_length = ft_strlen((char *)dst);
 	dst_or_length = dst_length;
-
-	if(dstsize == 0)
-		return src_length;
+	if (dstsize == 0)
+		return (src_length);
 	if (dstsize <= dst_length)
-        return src_length + dstsize;
+		return (src_length + dstsize);
 	while (dst_length < dstsize - 1 && i < src_length)
 	{
 		dst[dst_length] = src[i];
@@ -41,6 +40,7 @@ size_t	ft_strlcat(char *restrict dst, const char *src, size_t dstsize)
 	dst[dst_length] = '\0';
 	return (dst_or_length + src_length);
 }
+
 /*int main() {
     char dest[20] = "Hello"; // Destination buffer with space for 10 characters
     char src[] = "test cava , world!"; // Source string to append

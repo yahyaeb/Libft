@@ -6,7 +6,7 @@
 /*   By: yahiaelboukili <yahiaelboukili@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 18:00:47 by yahiaelbouk       #+#    #+#             */
-/*   Updated: 2024/09/17 20:21:07 by yahiaelbouk      ###   ########.fr       */
+/*   Updated: 2024/10/24 20:34:14 by yahiaelbouk      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_tolower(int s)
 {
-		if (s >= 'A' && s <= 'Z')
-			s = s + 32;
-		return s;
+	if (s >= 'A' && s <= 'Z')
+		s = s + 32;
+	return (s);
 }
 /* int main(int argc, char *argv[])
 {

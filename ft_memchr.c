@@ -6,7 +6,7 @@
 /*   By: yahiaelboukili <yahiaelboukili@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 16:49:51 by yahiaelbouk       #+#    #+#             */
-/*   Updated: 2024/09/18 16:57:46 by yahiaelbouk      ###   ########.fr       */
+/*   Updated: 2024/10/24 20:46:57 by yahiaelbouk      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 void	*ft_memchr(const void *str, int c, size_t n)
 {
-	size_t			i;
+	size_t	i;
 
 	i = 0;
 	while (i < n)
@@ -27,6 +27,7 @@ void	*ft_memchr(const void *str, int c, size_t n)
 	}
 	return (NULL);
 }
+
 /* int main() {
     char str[] = "yassine, ba hoa x!";
     char ch = 'o';
