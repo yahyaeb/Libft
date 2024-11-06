@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: yel-bouk <yel-bouk@student.42.fr>          +#+  +:+       +#+         #
+#    By: yel-bouk <yel-bouk@student.42nice.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/09 18:24:09 by daelee            #+#    #+#              #
-#    Updated: 2024/11/04 15:04:53 by yel-bouk         ###   ########.fr        #
+#    Updated: 2024/11/05 21:08:27 by yel-bouk         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,17 +20,12 @@ RM = rm -f
 FILES = ft_memset \
 		ft_bzero \
 		ft_memcpy \
-		ft_memmove \
 		ft_memchr \
-		ft_memcmp \
 		ft_strlen \
 		ft_strlcpy \
-		ft_strlcat \
 		ft_strchr \
 		ft_strrchr \
-		ft_strnstr \
 		ft_strncmp \
-		ft_atoi \
 		ft_isalpha \
 		ft_isdigit \
 		ft_isalnum \
@@ -38,8 +33,15 @@ FILES = ft_memset \
 		ft_isprint \
 		ft_toupper \
 		ft_tolower \
+		ft_memcmp \
+		ft_atoi	\
+		ft_strlcat \
+		ft_strdup \
+		ft_calloc \
+		ft_strnstr \
+		ft_memmove
 
-FILES_B = 	ft_lstnew \
+#FILES_B = 	ft_lstnew \
 	  		ft_lstadd_front \
 	  		ft_lstsize \
 	  		ft_lstlast \

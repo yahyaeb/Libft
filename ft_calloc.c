@@ -1,18 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yel-bouk <yel-bouk@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/04 12:51:04 by yel-bouk          #+#    #+#             */
-/*   Updated: 2024/11/05 13:39:39 by yel-bouk         ###   ########.fr       */
+/*   Created: 2024/11/05 16:47:56 by yel-bouk          #+#    #+#             */
+/*   Updated: 2024/11/05 17:35:39 by yel-bouk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalnum(int c)
+#include "libft.h"
+
+void	*ft_calloc(size_t count, size_t size)
 {
-	return ((c >= 'A' && c <= 'Z')
-		|| (c >= 'a' && c <= 'z')
-		|| (c >= '0' && c <= '9'));
+	char	*str;
+
+	str = malloc((count * size));
+	if (!str)
+		return (NULL);
+	ft_bzero(str, size * count);
+	return (str);
 }

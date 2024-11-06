@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yahiaelboukili <yahiaelboukili@student.    +#+  +:+       +#+        */
+/*   By: yel-bouk <yel-bouk@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 11:29:26 by yahiaelbouk       #+#    #+#             */
-/*   Updated: 2024/11/05 11:41:10 by yahiaelbouk      ###   ########.fr       */
+/*   Updated: 2024/11/05 13:39:08 by yel-bouk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
