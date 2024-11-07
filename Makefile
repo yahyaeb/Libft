@@ -6,7 +6,7 @@
 #    By: yel-bouk <yel-bouk@student.42nice.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/09 18:24:09 by daelee            #+#    #+#              #
-#    Updated: 2024/11/05 21:08:27 by yel-bouk         ###   ########.fr        #
+#    Updated: 2024/11/07 21:26:33 by yel-bouk         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,7 +39,14 @@ FILES = ft_memset \
 		ft_strdup \
 		ft_calloc \
 		ft_strnstr \
-		ft_memmove
+		ft_memmove \
+		ft_putchar_fd \
+		ft_putstr_fd \
+		ft_putendl_fd \
+		ft_putnbr_fd \
+		ft_strjoin \
+		ft_substr
+		
 
 #FILES_B = 	ft_lstnew \
 	  		ft_lstadd_front \

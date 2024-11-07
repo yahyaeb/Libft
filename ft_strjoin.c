@@ -1,43 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yel-bouk <yel-bouk@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/04 13:38:23 by yel-bouk          #+#    #+#             */
-/*   Updated: 2024/11/07 21:47:44 by yel-bouk         ###   ########.fr       */
+/*   Created: 2024/11/07 19:52:19 by yel-bouk          #+#    #+#             */
+/*   Updated: 2024/11/07 20:47:37 by yel-bouk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-
-void	*ft_memset(void *ptr, int value, size_t num)
+// concatenates s1 & s2 into a new string.
+char	*ft_strjoin(const char *s1, const char *s2)
 {
-	size_t	i;
+	size_t	len;
 	char	*str;
 
-	i = 0;
-	str = (char *)ptr;
-	while (i < num)
-	{
-		str[i] = (char)value;
-		i++;
-	}
+	if (!s1 || !s2)
+		return (NULL);
+	len = ft_strlen(s1) + ft_strlen(s2);
+	str = malloc((len + 1) * sizeof(char));
+	if (!str)
+		return (NULL);
+	ft_strlcpy(str, s1, len + 1);
+	ft_strlcat(str, s2, len + 1);
 	return (str);
 }
-
-/*
-int main()
-{
-    char str[50] = "GeeksForGeeks is for programming geeks.";
-    printf("\nBefore memset(): %s\n", str);
-
-    // Fill 8 characters starting from str[13] with '.'
-   ft_memset(str + 13, '.', 8*sizeof(char));
-
-    printf("After memset():  %s", str);
-    return 0;
-}
-*/

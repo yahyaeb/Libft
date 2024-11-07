@@ -6,7 +6,7 @@
 /*   By: yel-bouk <yel-bouk@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 20:54:39 by yel-bouk          #+#    #+#             */
-/*   Updated: 2024/11/05 21:23:00 by yel-bouk         ###   ########.fr       */
+/*   Updated: 2024/11/06 21:25:43 by yel-bouk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,16 +22,17 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	unsigned char	*s;
 	unsigned char	*d;
 
+	if (dest == src || n == 0)
+		return (dest);
 	i = 0;
 	s = (unsigned char *)src;
 	d = (unsigned char *)dest;
-	if (!dest && !src)
-		return (0);
 	if (d < s)
 	{
 		while (i < n)
 		{
-			d[i++] = s[i++];
+			d[i] = s[i];
+			i++;
 		}
 	}
 	else if (s < d)
