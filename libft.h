@@ -12,6 +12,7 @@ int count_int_array(int n);
 int ft_memcmp(const void *ptr1, const void *ptr2, size_t num);
 int	ft_strncmp(const char *str1, const char *str2, size_t num);
 char *ft_strchr(const char *str, int c);
+char *ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char *ft_itoa(int n);
 char	*ft_strdup(const char *str);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
