@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yel-bouk <yel-bouk@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/09 23:28:07 by yel-bouk          #+#    #+#             */
-/*   Updated: 2024/11/10 13:40:02 by yel-bouk         ###   ########.fr       */
+/*   Created: 2024/11/10 14:27:45 by yel-bouk          #+#    #+#             */
+/*   Updated: 2024/11/10 14:31:44 by yel-bouk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//Creates a new node for a linked list
-t_list	*ft_lstnew(void *content)
+// size of a linked list
+int ft_lstsize(t_list *lst)
 {
-	t_list	*data;
+    int i;
 
-	data = malloc(sizeof(t_list));
-	if (!data)
-		return (NULL);
-	data->content = content;
-	data->next = NULL;
-	return (data);
+    i = 0;
+    while(lst)
+    {
+        lst = lst->next;
+        i++;
+    }
+    return (i);
 }

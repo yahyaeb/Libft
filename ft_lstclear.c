@@ -1,25 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yel-bouk <yel-bouk@student.42nice.fr>      +#+  +:+       +#+        */
+/*   By: yahiaelboukili <yahiaelboukili@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/09 23:28:07 by yel-bouk          #+#    #+#             */
-/*   Updated: 2024/11/10 13:40:02 by yel-bouk         ###   ########.fr       */
+/*   Created: 2024/10/20 15:52:11 by yahiaelbouk       #+#    #+#             */
+/*   Updated: 2024/10/24 21:13:03 by yahiaelbouk      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//Creates a new node for a linked list
-t_list	*ft_lstnew(void *content)
-{
-	t_list	*data;
 
-	data = malloc(sizeof(t_list));
-	if (!data)
-		return (NULL);
-	data->content = content;
-	data->next = NULL;
-	return (data);
+void	ft_lstclear(t_list **lst, void (*del)(void*))
+{
+	t_list	*temp;
+
+	if (lst == NULL || del == NULL)
+		return ;
+	while (*lst)
+	{
+		temp = (*lst)->next;
+		ft_lstdelone(*lst, del);
+		*lst = temp;
+	}
 }
