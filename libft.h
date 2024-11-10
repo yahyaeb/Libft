@@ -1,5 +1,13 @@
 #include <stdlib.h>
 #include <unistd.h>
+#include <stdio.h>
+
+typedef struct s_list
+{
+void *content;
+size_t content_size;
+struct s_list *next;
+} t_list;
 
 int	ft_isalpha(int c);
 int	ft_isascii(int c);
@@ -19,6 +27,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 char *ft_substr(const char *s, unsigned int start, size_t len);
 char *ft_strjoin(const char *s1, const char *s2);
 char    *ft_strtrim(const char *s1, const char *set);
+char	*ft_strncpy(char *dest, const char *src, size_t n);
 size_t	ft_strlen(const char *str);
 size_t	ft_strlcpy(char *dest, const char *src, size_t size);
 void	*ft_memset(void *ptr, int value, size_t num);
@@ -31,3 +40,8 @@ void ft_putstr_fd(char *s, int fd);
 void ft_putendl_fd(char *s, int fd);
 int	ft_atoi(const char *str);
 size_t	ft_strlcat(char *dest, const char *src, size_t size);
+char	**free_table(char **table);
+int	ft_wordsize(const char *str, char delimiter);
+int	ft_wordcount(const char *str, char delimiter);
+int	ft_isdelimiter(char c, char delimiter);
+char	**ft_split(const char *str, char delimiter);

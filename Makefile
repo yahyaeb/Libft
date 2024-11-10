@@ -6,7 +6,7 @@
 #    By: yel-bouk <yel-bouk@student.42nice.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/09 18:24:09 by daelee            #+#    #+#              #
-#    Updated: 2024/11/09 15:41:23 by yel-bouk         ###   ########.fr        #
+#    Updated: 2024/11/10 11:11:00 by yel-bouk         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,7 +48,9 @@ FILES = ft_memset \
 		ft_substr \
 		ft_itoa \
 		ft_strtrim \
-		ft_strmapi
+		ft_strmapi \
+		ft_strncpy \
+		ft_split
 		
 
 #FILES_B = 	ft_lstnew \
