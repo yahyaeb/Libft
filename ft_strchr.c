@@ -6,12 +6,11 @@
 /*   By: yel-bouk <yel-bouk@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 11:29:26 by yahiaelbouk       #+#    #+#             */
-/*   Updated: 2024/11/05 13:39:08 by yel-bouk         ###   ########.fr       */
+/*   Updated: 2024/11/10 21:16:34 by yel-bouk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 //Description: Locates the first occurrence of a character in a string.
 char	*ft_strchr(const char *str, int c)
 {

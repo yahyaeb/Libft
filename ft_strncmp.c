@@ -6,13 +6,12 @@
 /*   By: yel-bouk <yel-bouk@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 15:23:20 by yel-bouk          #+#    #+#             */
-/*   Updated: 2024/11/05 13:38:56 by yel-bouk         ###   ########.fr       */
+/*   Updated: 2024/11/10 21:17:01 by yel-bouk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // Description: Compares up to a specified number of characters of two strings.
 #include "libft.h"
-#include <stdio.h>
 
 int	ft_strncmp(const char *str1, const char *str2, size_t num)
 {

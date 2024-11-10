@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yahiaelboukili <yahiaelboukili@student.    +#+  +:+       +#+        */
+/*   By: yel-bouk <yel-bouk@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/20 15:52:11 by yahiaelbouk       #+#    #+#             */
-/*   Updated: 2024/10/24 21:13:03 by yahiaelbouk      ###   ########.fr       */
+/*   Updated: 2024/11/10 21:13:23 by yel-bouk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+// Deletes and frees all nodes in the list 
+//pointed to by `lst`, setting `*lst` to NULL.
 void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
 	t_list	*temp;

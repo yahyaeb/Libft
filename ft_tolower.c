@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yahiaelboukili <yahiaelboukili@student.    +#+  +:+       +#+        */
+/*   By: yel-bouk <yel-bouk@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 13:08:51 by yel-bouk          #+#    #+#             */
-/*   Updated: 2024/11/05 12:42:48 by yahiaelbouk      ###   ########.fr       */
+/*   Updated: 2024/11/10 21:18:07 by yel-bouk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-
+// Converts an uppercase letter `c` to lowercase
 int	ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')

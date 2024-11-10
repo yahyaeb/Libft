@@ -6,10 +6,11 @@
 /*   By: yel-bouk <yel-bouk@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 12:51:04 by yel-bouk          #+#    #+#             */
-/*   Updated: 2024/11/05 13:39:39 by yel-bouk         ###   ########.fr       */
+/*   Updated: 2024/11/10 21:11:40 by yel-bouk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+//check if int c is alphanumerical
 int	ft_isalnum(int c)
 {
 	return ((c >= 'A' && c <= 'Z')

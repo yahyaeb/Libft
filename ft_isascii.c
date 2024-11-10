@@ -3,13 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yel-bouk <yel-bouk@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yel-bouk <yel-bouk@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 12:57:40 by yel-bouk          #+#    #+#             */
-/*   Updated: 2024/11/04 13:04:21 by yel-bouk         ###   ########.fr       */
+/*   Updated: 2024/11/10 21:11:54 by yel-bouk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+//checks if c is an ascii value
 int	ft_isascii(int c)
 {
 	return (c >= 0 && c <= 127);
