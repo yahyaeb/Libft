@@ -6,7 +6,7 @@
 #    By: yel-bouk <yel-bouk@student.42nice.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/22 18:37:34 by yahiaelbouk       #+#    #+#              #
-#    Updated: 2024/11/10 15:29:59 by yel-bouk         ###   ########.fr        #
+#    Updated: 2024/11/11 09:44:31 by yel-bouk         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,7 +48,9 @@ SRCS = ft_isalpha.c \
 	   ft_substr.c \
 	   ft_strtrim.c \
 	   ft_strjoin.c \
-	   ft_split.c
+	   ft_split.c \
+       ft_strncpy.c \
+       ft_strcmp.c
 
 SRCS_BONUS = ft_lstnew.c \
              ft_lstadd_front.c \
@@ -58,8 +60,7 @@ SRCS_BONUS = ft_lstnew.c \
              ft_lstdelone.c \
              ft_lstclear.c \
              ft_lstiter.c \
-             ft_lstmap.c \
-             ft_strncpy.c
+             ft_lstmap.c 
 
 
 OBJS = $(addprefix $(OBJS_DIR), $(SRCS:.c=.o))

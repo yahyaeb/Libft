@@ -6,17 +6,12 @@
 /*   By: yel-bouk <yel-bouk@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 19:00:46 by yel-bouk          #+#    #+#             */
-/*   Updated: 2024/11/10 21:16:20 by yel-bouk         ###   ########.fr       */
+/*   Updated: 2024/11/10 21:29:19 by yel-bouk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 // Splits the string `s` into an array of substrings using the delimiter `c
-static int	ft_isdelimiter(char c, char delimiter)
-{
-	return (c == delimiter);
-}
-
 static int	ft_wordcount(const char *str, char delimiter)
 {
 	int	count;
