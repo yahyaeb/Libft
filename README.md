@@ -75,6 +75,7 @@
     <ul>
         <li><code>ft_itoa</code> - Converts an integer to a string.</li>
         <li><code>ft_strmapi</code> - Creates a new string by applying a function to each character of an existing string.</li>
+        <li><code>ft_striteri</code> - Applies a function to each character of a string, with the character's index as an argument.</li>
         <li><code>ft_substr</code> - Returns a substring starting at a specified index for a given length.</li>
         <li><code>ft_strjoin</code> - Concatenates two strings into a new string.</li>
         <li><code>ft_strtrim</code> - Trims specified characters from the start and end of a string.</li>
