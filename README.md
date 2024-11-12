@@ -107,8 +107,9 @@
     <ol>
         <li>Clone the repository and navigate to the directory.</li>
         <li>Run <code>make</code> to compile <code>libft.a</code>.</li>
-        <li>Include <code>libft.h</code> in your project to access function declarations.</li>
-        <li>Link <code>libft.a</code> during the compilation of your project.</li>
+        <li>Include <code>libft.h</code> in your project files with <code>#include "libft.h"</code> to access function declarations.</li>
+        <li>If needed, copy the compiled <code>libft.a</code> file into other projects or link it during compilation to use the library.</li>
     </ol>
+
 </body>
 </html>
