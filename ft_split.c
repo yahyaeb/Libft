@@ -3,15 +3,33 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yel-bouk <yel-bouk@student.42nice.fr>      +#+  +:+       +#+        */
+/*   By: yel-bouk <yel-bouk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 19:00:46 by yel-bouk          #+#    #+#             */
-/*   Updated: 2024/11/10 21:29:19 by yel-bouk         ###   ########.fr       */
+/*   Updated: 2024/11/11 15:16:26 by yel-bouk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 // Splits the string `s` into an array of substrings using the delimiter `c
+static char	*ft_strncpy(char *dest, const char *src, size_t n)
+{
+	size_t	i;
+
+	i = 0;
+	while (src[i] && i < n)
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	while (i < n)
+	{
+		dest[i] = '\0';
+		i++;
+	}
+	return (dest);
+}
+
 static int	ft_wordcount(const char *str, char delimiter)
 {
 	int	count;
@@ -57,7 +75,7 @@ static int	ft_wordsize(char const *str, char c)
 	return (len);
 }
 
-char	**free_table(char **table)
+static char	**free_table(char **table)
 {
 	int	i;
 

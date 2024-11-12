@@ -1,32 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yel-bouk <yel-bouk@student.42nice.fr>      +#+  +:+       +#+        */
+/*   By: yel-bouk <yel-bouk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/09 22:16:05 by yel-bouk          #+#    #+#             */
-/*   Updated: 2024/11/10 21:17:20 by yel-bouk         ###   ########.fr       */
+/*   Created: 2024/11/11 12:59:47 by yel-bouk          #+#    #+#             */
+/*   Updated: 2024/11/11 17:10:30 by yel-bouk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include "libft.h"
-//Copies up to `n` characters from the string `src` to `dest`. 
-char	*ft_strncpy(char *dest, const char *src, size_t n)
+//applies a given function f to each character of the string s.
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	size_t	i;
+	int	i;
 
 	i = 0;
-	while (src[i] && i < n)
+	while (s[i])
 	{
-		dest[i] = src[i];
+		f(i, &s[i]);
 		i++;
 	}
-	while (i < n)
-	{
-		dest[i] = '\0';
-		i++;
-	}
-	return (dest);
 }

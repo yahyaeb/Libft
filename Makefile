@@ -3,18 +3,16 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: yel-bouk <yel-bouk@student.42nice.fr>      +#+  +:+       +#+         #
+#    By: yel-bouk <yel-bouk@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/22 18:37:34 by yahiaelbouk       #+#    #+#              #
-#    Updated: 2024/11/11 09:44:31 by yel-bouk         ###   ########.fr        #
+#    Updated: 2024/11/11 17:50:11 by yel-bouk         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror -g
-OBJS_DIR = obj/
-
 
 SRCS = ft_isalpha.c \
        ft_isdigit.c \
@@ -39,18 +37,17 @@ SRCS = ft_isalpha.c \
        ft_strnstr.c \
        ft_calloc.c \
        ft_strdup.c \
-	   ft_putchar_fd.c \
-	   ft_putstr_fd.c \
-	   ft_putendl_fd.c \
-	   ft_putnbr_fd.c \
-	   ft_itoa.c \
-	   ft_strmapi.c \
-	   ft_substr.c \
-	   ft_strtrim.c \
-	   ft_strjoin.c \
-	   ft_split.c \
-       ft_strncpy.c \
-       ft_strcmp.c
+       ft_putchar_fd.c \
+       ft_putstr_fd.c \
+       ft_putendl_fd.c \
+       ft_putnbr_fd.c \
+       ft_itoa.c \
+       ft_strmapi.c \
+       ft_substr.c \
+       ft_strtrim.c \
+       ft_strjoin.c \
+       ft_split.c \
+       ft_striteri.c
 
 SRCS_BONUS = ft_lstnew.c \
              ft_lstadd_front.c \
@@ -62,36 +59,26 @@ SRCS_BONUS = ft_lstnew.c \
              ft_lstiter.c \
              ft_lstmap.c 
 
+OBJS = $(SRCS:.c=.o)
+OBJS_BONUS = $(SRCS_BONUS:.c=.o)
 
-OBJS = $(addprefix $(OBJS_DIR), $(SRCS:.c=.o))
-OBJS_BONUS = $(addprefix $(OBJS_DIR), $(SRCS_BONUS:.c=.o))
+all: $(NAME)
 
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
 
-OBJS_ALL = $(OBJS)
-ifdef WITH_BONUS
-    OBJS_ALL += $(OBJS_BONUS)
-endif
+$(NAME): $(OBJS)
+	ar rcs $(NAME) $(OBJS)
 
-all: $(OBJS_DIR) $(NAME)
+bonus: OBJS += $(OBJS_BONUS)
+bonus: $(OBJS_BONUS) $(NAME)
 
-$(OBJS_DIR):
-	mkdir -p $(OBJS_DIR)
-
-# Compile .c files to .o files
-$(OBJS_DIR)%.o: %.c
-	$(CC) $(CFLAGS) -c -o $@ $<
-
-$(NAME): $(OBJS_ALL)
-	ar rcs $@ $^
-
-bonus:
-	$(MAKE) WITH_BONUS=1 all
 clean:
-	rm -rf $(OBJS_DIR)
+	rm -f $(OBJS) $(OBJS_BONUS)
 
 fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re bonus
